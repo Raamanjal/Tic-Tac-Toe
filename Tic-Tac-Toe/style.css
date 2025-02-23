@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #89CFF0, #FFB6C1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+    height: 8rem;
+    width: 8rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 1rem;
+    font-size: 4rem;
+    color: #ff4d6d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.box:active {
+    transform: scale(0.95);
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#new-game {
+    background: #222;
+    color: white;
+}
+ #new-game:hover {
+    background: #444;
+}
+/* Fixing the Logo (Tic-Tac-Toe Title) */
+h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4rem;
+}
+
+/* Fixing the Reset Button */
+#reset {
+    margin-top: 5rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #222, #444);
+    color: white;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#reset:hover {
+    background: linear-gradient(135deg, #444, #666);
+    transform: scale(1.05);
+}
+
+/* Fixing the Popup */
+.msg-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    z-index: 10;
+}
+
+#msg {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e50046;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Making sure the popup is properly hidden */
+.hide {
+    display: none;
+}
